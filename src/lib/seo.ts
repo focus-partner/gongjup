@@ -20,16 +20,8 @@ export async function pushToBaidu(urls: string[]): Promise<{
   pushed: number;
   message: string;
 }> {
-  const siteUrl = process.env.SITE_URL;
-  const token = process.env.BAIDU_PUSH_TOKEN;
-
-  if (!siteUrl || !token) {
-    return {
-      success: false,
-      pushed: 0,
-      message: "未配置 SITE_URL 或 BAIDU_PUSH_TOKEN 环境变量",
-    };
-  }
+  const siteUrl = process.env.SITE_URL || "https://gongjup.com";
+  const token = process.env.BAIDU_PUSH_TOKEN || "BmD7LecP5eh5HExu";
 
   try {
     const apiUrl = `${BAIDU_PUSH_URL}?site=${encodeURIComponent(siteUrl)}&token=${token}`;
