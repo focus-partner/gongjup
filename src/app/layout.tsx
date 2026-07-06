@@ -36,6 +36,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "工具派" }],
   robots: { index: true, follow: true },
+  verification: {
+    other: {
+      "baidu-site-verification": "codeva-EYPFwQ9ke0",
+    },
+  },
   openGraph: {
     type: "website",
     siteName: "工具派",
