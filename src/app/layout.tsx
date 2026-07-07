@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
@@ -71,6 +72,10 @@ export default function RootLayout({
             <Footer />
             {/* Toast 通知 */}
             <Toaster richColors position="top-center" />
+            {/* 百度统计 */}
+            <Script id="baidu-tongji" strategy="afterInteractive">
+              {`var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?71700a49bee232559bdab68fdb064b83";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})()`}
+            </Script>
           </TooltipProvider>
         </ThemeProvider>
       </body>

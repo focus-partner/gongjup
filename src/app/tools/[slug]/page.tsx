@@ -54,6 +54,7 @@ import { LoanCalculatorTool } from "@/components/tools/loan-calculator-tool";
 import { ImageTextTool } from "@/components/tools/image-text-tool";
 import { ImageMergeTool } from "@/components/tools/image-merge-tool";
 import { FortuneTool } from "@/components/tools/fortune-tool";
+import { DeviceInfoTool } from "@/components/tools/device-info-tool";
 
 /** 工具组件映射表 —— 新增工具时在这里注册 */
 const toolComponents: Record<string, React.ComponentType> = {
@@ -104,6 +105,7 @@ const toolComponents: Record<string, React.ComponentType> = {
   "image-text": ImageTextTool,
   "image-merge": ImageMergeTool,
   fortune: FortuneTool,
+  "device-info": DeviceInfoTool,
 };
 
 /** 为每个工具生成静态页面 */

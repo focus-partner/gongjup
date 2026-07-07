@@ -519,6 +519,12 @@ export const tools: ToolConfig[] = [
     keywords: ["图片拼接","图片合并","多图拼接","长图拼接","拼图工具"],
   },
 
+  // ============ D5. 开发者工具补充4 ============
+  {
+    slug: "device-info", name: "设备信息查看", description: "在线查看浏览器和设备信息，包括屏幕分辨率、设备像素比、User Agent等，开发调试常用", category: "developer", icon: "📱",
+    keywords: ["设备信息","屏幕分辨率","UserAgent","浏览器信息","设备像素比","在线检测"],
+  },
+
   // ============ G. 病毒传播类 ============
   {
     slug: "wechat-chat",
