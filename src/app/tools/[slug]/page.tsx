@@ -28,6 +28,32 @@ import { PasswordGeneratorTool } from "@/components/tools/password-generator-too
 import { QRGeneratorTool } from "@/components/tools/qr-generator-tool";
 import { PDFToWordTool } from "@/components/tools/pdf-to-word-tool";
 import { WatermarkRemoverTool } from "@/components/tools/watermark-remover-tool";
+import { AgeCalculatorTool } from "@/components/tools/age-calculator-tool";
+import { DateCalculatorTool } from "@/components/tools/date-calculator-tool";
+import { CountdownTool } from "@/components/tools/countdown-tool";
+import { RandomGeneratorTool } from "@/components/tools/random-generator-tool";
+import { EncodeDecodeTool } from "@/components/tools/encode-decode-tool";
+import { HashGeneratorTool } from "@/components/tools/hash-generator-tool";
+import { IDParserTool } from "@/components/tools/id-parser-tool";
+import { ChineseConverterTool } from "@/components/tools/chinese-converter-tool";
+import { KinshipTool } from "@/components/tools/kinship-tool";
+import { JSONFormatterTool } from "@/components/tools/json-formatter-tool";
+import { RegexTesterTool } from "@/components/tools/regex-tester-tool";
+import { PhoneLookupTool } from "@/components/tools/phone-lookup-tool";
+import { ColorConverterTool } from "@/components/tools/color-converter-tool";
+import { ColorPaletteTool } from "@/components/tools/color-palette-tool";
+import { TextDedupTool } from "@/components/tools/text-dedup-tool";
+import { ImageCropTool } from "@/components/tools/image-crop-tool";
+import { ImageResizeTool } from "@/components/tools/image-resize-tool";
+import { ImageRotateTool } from "@/components/tools/image-rotate-tool";
+import { PinyinTool } from "@/components/tools/pinyin-tool";
+import { IPLookupTool } from "@/components/tools/ip-lookup-tool";
+import { NumberCNTool } from "@/components/tools/number-cn-tool";
+import { DueDateTool } from "@/components/tools/due-date-tool";
+import { LoanCalculatorTool } from "@/components/tools/loan-calculator-tool";
+import { ImageTextTool } from "@/components/tools/image-text-tool";
+import { ImageMergeTool } from "@/components/tools/image-merge-tool";
+import { FortuneTool } from "@/components/tools/fortune-tool";
 
 /** 工具组件映射表 —— 新增工具时在这里注册 */
 const toolComponents: Record<string, React.ComponentType> = {
@@ -52,6 +78,32 @@ const toolComponents: Record<string, React.ComponentType> = {
   "pdf-to-word": PDFToWordTool,
   "password-generator": PasswordGeneratorTool,
   "qr-generator": QRGeneratorTool,
+  "age-calculator": AgeCalculatorTool,
+  "date-calculator": DateCalculatorTool,
+  countdown: CountdownTool,
+  "random-generator": RandomGeneratorTool,
+  "encode-decode": EncodeDecodeTool,
+  "hash-generator": HashGeneratorTool,
+  "id-parser": IDParserTool,
+  "chinese-converter": ChineseConverterTool,
+  kinship: KinshipTool,
+  "json-formatter": JSONFormatterTool,
+  "regex-tester": RegexTesterTool,
+  "phone-lookup": PhoneLookupTool,
+  "color-converter": ColorConverterTool,
+  "color-palette": ColorPaletteTool,
+  "text-dedup": TextDedupTool,
+  "image-crop": ImageCropTool,
+  "image-resize": ImageResizeTool,
+  "image-rotate": ImageRotateTool,
+  pinyin: PinyinTool,
+  "ip-lookup": IPLookupTool,
+  "number-cn": NumberCNTool,
+  "due-date": DueDateTool,
+  "loan-calculator": LoanCalculatorTool,
+  "image-text": ImageTextTool,
+  "image-merge": ImageMergeTool,
+  fortune: FortuneTool,
 };
 
 /** 为每个工具生成静态页面 */
