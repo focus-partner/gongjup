@@ -11,7 +11,7 @@ export function DeviceInfoTool() {
       {label:"屏幕分辨率",value:`${window.screen.width}×${window.screen.height}`},
       {label:"可用分辨率",value:`${window.screen.availWidth}×${window.screen.availHeight}`},
       {label:"设备像素比",value:`${window.devicePixelRatio}x`},
-      {label:"浏览器",value:(navigator as Record<string,unknown>).userAgentData?.platform as string||navigator.platform},
+      {label:"操作系统",value:navigator.platform||"未知"},
       {label:"语言",value:navigator.language},
       {label:"Cookie",value:navigator.cookieEnabled?"已启用":"已禁用"},
       {label:"在线状态",value:navigator.onLine?"在线":"离线"},
