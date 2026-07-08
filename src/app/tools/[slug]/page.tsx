@@ -55,6 +55,11 @@ import { ImageTextTool } from "@/components/tools/image-text-tool";
 import { ImageMergeTool } from "@/components/tools/image-merge-tool";
 import { FortuneTool } from "@/components/tools/fortune-tool";
 import { DeviceInfoTool } from "@/components/tools/device-info-tool";
+import { LotteryCalcTool } from "@/components/tools/lottery-calc-tool";
+import { BillSplitTool } from "@/components/tools/bill-split-tool";
+import { MartianTool } from "@/components/tools/martian-tool";
+import { EdictTool } from "@/components/tools/edict-tool";
+import { BloodTypeTool } from "@/components/tools/blood-type-tool";
 
 /** 工具组件映射表 —— 新增工具时在这里注册 */
 const toolComponents: Record<string, React.ComponentType> = {
@@ -106,6 +111,11 @@ const toolComponents: Record<string, React.ComponentType> = {
   "image-merge": ImageMergeTool,
   fortune: FortuneTool,
   "device-info": DeviceInfoTool,
+  "lottery-calc": LotteryCalcTool,
+  "bill-split": BillSplitTool,
+  martian: MartianTool,
+  edict: EdictTool,
+  "blood-type": BloodTypeTool,
 };
 
 /** 为每个工具生成静态页面 */

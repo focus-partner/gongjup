@@ -525,6 +525,32 @@ export const tools: ToolConfig[] = [
     keywords: ["设备信息","屏幕分辨率","UserAgent","浏览器信息","设备像素比","在线检测"],
   },
 
+  // ============ E5. 彩票工具 ============
+  {
+    slug: "lottery-calc", name: "彩票倍投计算器", description: "免费彩票倍投计算器，输入起投金额和赔率自动计算每轮投注额和累计投入，彩民必备工具", category: "calculator", icon: "🎰",
+    keywords: ["彩票倍投计算器","倍投计算","追号计算","彩票倍投方案","倍投计划","倍投表"], isPopular: true,
+  },
+
+  // ============ F2. 趣味生成器 ============
+  {
+    slug: "edict", name: "圣旨生成器", description: "趣味圣旨诏书生成器，自定义内容和对象，一键生成仿古圣旨文案，适合朋友圈整蛊和节日祝福", category: "viral", icon: "📜",
+    keywords: ["圣旨生成器","诏书生成","古代圣旨","圣旨模板","朋友圈整蛊","皇帝诏书"], isPopular: true,
+  },
+  {
+    slug: "martian", name: "火星文转换器", description: "中文火星文在线转换工具，支持中文转火星文和火星文转中文双向转换，一键复制，00后必备", category: "viral", icon: "👽",
+    keywords: ["火星文转换","火星文生成","火星字体","非主流文字","火星文在线","个性签名"], isPopular: true,
+  },
+  {
+    slug: "blood-type", name: "血型配对", description: "血型配对测试工具，选择双方血型查看恋爱/友情/工作匹配度和性格分析，娱乐参考", category: "viral", icon: "🩸",
+    keywords: ["血型配对","血型测试","血型爱情","血型性格","血型匹配","血型分析"],
+  },
+
+  // ============ E6. 生活助手补充3 ============
+  {
+    slug: "bill-split", name: "AA制分账计算器", description: "在线AA制分账计算工具，多人聚餐旅行自动算账，一键生成最优结算方案，再也不用手动算钱", category: "life", icon: "💸",
+    keywords: ["AA制计算器","分账计算","聚餐AA","旅行分账","自动算账","多人分账"], isPopular: true,
+  },
+
   // ============ G. 病毒传播类 ============
   {
     slug: "wechat-chat",
