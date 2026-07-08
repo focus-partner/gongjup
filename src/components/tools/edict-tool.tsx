@@ -4,10 +4,10 @@ import { Input } from "@/components/ui/input"; import { Label } from "@/componen
 import { generateEdict } from "@/engines/fun-generators";
 import { Copy, Download } from "lucide-react";
 
-const presets = [
-  {t:"催饭诏书",r:"饭友",c:"朕已饥饿难耐，着尔速速起身觅食，不得有误！火锅烧烤皆可，AA制亦可。若再拖延，罚洗碗一周！",e:"干饭皇帝"},
-  {t:"早睡诏书",r:"熬夜的自己",c:"朕深知熬夜伤身，特颁此诏命尔即日起每日23时前就寝。违者次日罚站一小时，并请全组喝奶茶！",e:"养生大帝"},
-  {t:"摸鱼诏书",r:"全体同事",c:"今日宜摸鱼、宜发呆、宜刷朋友圈。发现有人认真工作，立即举报至朕处，重赏！",e:"带薪摸鱼王"},
+const presets: {title:string;recipient:string;content:string;emperor:string}[] = [
+  {title:"催饭诏书",recipient:"饭友",content:"朕已饥饿难耐，着尔速速起身觅食，不得有误！火锅烧烤皆可，AA制亦可。若再拖延，罚洗碗一周！",emperor:"干饭皇帝"},
+  {title:"早睡诏书",recipient:"熬夜的自己",content:"朕深知熬夜伤身，特颁此诏命尔即日起每日23时前就寝。违者次日罚站一小时，并请全组喝奶茶！",emperor:"养生大帝"},
+  {title:"摸鱼诏书",recipient:"全体同事",content:"今日宜摸鱼、宜发呆、宜刷朋友圈。发现有人认真工作，立即举报至朕处，重赏！",emperor:"带薪摸鱼王"},
 ];
 
 export function EdictTool() {
@@ -16,7 +16,7 @@ export function EdictTool() {
   const gen=()=>{setResult(generateEdict({title:opts.title||"圣旨",recipient:opts.recipient||"爱卿",content:opts.content||"钦此",emperor:opts.emperor||"朕"}))};
   return (
     <div className="space-y-5">
-      <div className="flex flex-wrap gap-2">{presets.map(p=><button key={p.t} onClick={()=>{setOpts(p);setTimeout(()=>setResult(generateEdict(p)),50)}} className="px-3 py-1.5 rounded-lg text-xs bg-muted hover:bg-primary/10 transition-colors">{p.t}</button>)}</div>
+      <div className="flex flex-wrap gap-2">{presets.map(p=><button key={p.title} onClick={()=>{setOpts(p);setTimeout(()=>setResult(generateEdict(p)),50)}} className="px-3 py-1.5 rounded-lg text-xs bg-muted hover:bg-primary/10 transition-colors">{p.title}</button>)}</div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div><Label>诏书标题</Label><Input value={opts.title} onChange={e=>setOpts({...opts,title:e.target.value})} className="mt-1.5" placeholder="如：吃饭诏书"/></div>
         <div><Label>颁发给谁</Label><Input value={opts.recipient} onChange={e=>setOpts({...opts,recipient:e.target.value})} className="mt-1.5" placeholder="如：爱卿张三"/></div>

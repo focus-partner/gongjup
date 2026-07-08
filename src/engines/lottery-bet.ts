@@ -24,7 +24,8 @@ export function calcChasingBet(
   let accumulated = 0;
 
   for (let i = 1; i <= maxRounds; i++) {
-    const betAmount = i === 1 ? baseAmount : Math.round(betAmount * multiplier * 100) / 100;
+    const prevBet = i === 1 ? baseAmount : rounds[i - 2].betAmount;
+    const betAmount = Math.round(prevBet * multiplier * 100) / 100;
     accumulated += betAmount;
     const ifWin = Math.round(betAmount * odds * 100) / 100;
     const netProfit = Math.round((ifWin - accumulated) * 100) / 100;
