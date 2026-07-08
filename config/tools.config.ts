@@ -551,6 +551,24 @@ export const tools: ToolConfig[] = [
     keywords: ["AA制计算器","分账计算","聚餐AA","旅行分账","自动算账","多人分账"], isPopular: true,
   },
 
+  // ============ F3. 趣味生成器补充 ============
+  {
+    slug: "nickname", name: "网名生成器", description: "在线网名昵称生成器，支持可爱/高冷/沙雕三种风格，一键生成12个创意网名，点击复制，适合微信/QQ/游戏取名", category: "viral", icon: "✨",
+    keywords: ["网名生成器","昵称生成","微信网名","游戏名字","网名大全","个性网名","好听网名"], isPopular: true,
+  },
+  {
+    slug: "resignation", name: "辞职信生成器", description: "在线辞职信生成器，输入姓名和公司自动生成体面辞职信，模板丰富随机组合，告别辞穷尴尬", category: "viral", icon: "📝",
+    keywords: ["辞职信生成","辞职信模板","辞职信怎么写","辞职申请书","在线辞职信","辞职报告"],
+  },
+  {
+    slug: "love-words", name: "情话生成器", description: "在线情话生成器，一键生成土味情话和甜言蜜语，每天换一批不重样，表白神器", category: "viral", icon: "💕",
+    keywords: ["情话生成器","土味情话","甜言蜜语","表白文案","情话大全","撩人情话"], isPopular: true,
+  },
+  {
+    slug: "express", name: "快递单生成器", description: "趣味快递订单模拟生成器，自定义订单号生成虚假快递信息，仅供娱乐整蛊朋友", category: "viral", icon: "📦",
+    keywords: ["快递单生成","模拟快递","快递截图","假快递","整蛊工具","快递生成器"],
+  },
+
   // ============ G. 病毒传播类 ============
   {
     slug: "wechat-chat",

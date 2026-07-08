@@ -60,6 +60,10 @@ import { BillSplitTool } from "@/components/tools/bill-split-tool";
 import { MartianTool } from "@/components/tools/martian-tool";
 import { EdictTool } from "@/components/tools/edict-tool";
 import { BloodTypeTool } from "@/components/tools/blood-type-tool";
+import { NicknameTool } from "@/components/tools/nickname-tool";
+import { ResignationTool } from "@/components/tools/resignation-tool";
+import { LoveWordsTool } from "@/components/tools/love-words-tool";
+import { ExpressTool } from "@/components/tools/express-tool";
 
 /** 工具组件映射表 —— 新增工具时在这里注册 */
 const toolComponents: Record<string, React.ComponentType> = {
@@ -116,6 +120,10 @@ const toolComponents: Record<string, React.ComponentType> = {
   martian: MartianTool,
   edict: EdictTool,
   "blood-type": BloodTypeTool,
+  "nickname": NicknameTool,
+  "resignation": ResignationTool,
+  "love-words": LoveWordsTool,
+  express: ExpressTool,
 };
 
 /** 为每个工具生成静态页面 */
