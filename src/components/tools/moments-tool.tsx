@@ -7,7 +7,7 @@ const avatars=["🐱","🐶","🐰","🐼","🦊","🐸","🐵","🦄","🐲","�
 
 export function MomentsTool() {
   const [name,setName]=useState("小明");
-  const [avatar,setAv]=useState(0);
+  const [av,setAv]=useState(0);
   const [content,setContent]=useState("今天天气真好！🌞");
   const [time,setTime]=useState("5分钟前");
   const [likes,setLikes]=useState("小红, 张三, 李四, 王五");
