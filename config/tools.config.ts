@@ -164,18 +164,14 @@ export const tools: ToolConfig[] = [
     isNew: true,
   },
   {
-    slug: "video-to-gif",
-    name: "视频转 GIF",
+    slug: "fake-ticket",
+    name: "仿真机票生成器",
     description:
-      "在线视频转 GIF 动图，支持 MP4/WEBM 格式，自定义帧率尺寸时长，本地处理不消耗服务器资源",
+      "趣味仿真机票/登机牌生成器，自定义目的地、航班号、乘客姓名，生成仿真登机牌图片，朋友圈整蛊神器",
     category: "file-processing",
-    icon: "🎬",
+    icon: "✈️",
     keywords: [
-      "视频转GIF",
-      "MP4转GIF",
-      "视频转动图",
-      "在线视频转GIF",
-      "免费视频转GIF",
+      "仿真机票","登机牌生成","假机票生成","朋友圈整蛊","机票截图","航班生成器"
     ],
     isNew: true,
   },
@@ -586,20 +582,16 @@ export const tools: ToolConfig[] = [
     ],
   },
   {
-    slug: "year-summary",
-    name: "AI 年终总结生成器",
+    slug: "moments",
+    name: "朋友圈截图生成器",
     description:
-      "AI 驱动的年终总结生成器，回答几个简单问题即可生成个性化年终总结，支持导出 PDF 和 Word 格式",
+      "在线微信朋友圈截图生成器，自定义头像、昵称、内容和点赞评论，生成仿真朋友圈截图，整蛊好友必备",
     category: "viral",
-    icon: "🎯",
+    icon: "📱",
     keywords: [
-      "年终总结生成器",
-      "AI年终总结",
-      "年终总结模板",
-      "年度总结怎么写",
-      "个人年终总结",
-      "年终总结AI",
+      "朋友圈截图","朋友圈生成","微信朋友圈","朋友圈模拟","截图生成","朋友圈整蛊"
     ],
+    isPopular: true,
   },
 ];
 

@@ -7,7 +7,7 @@ const upperUnits=["","拾","佰","仟","万","拾万","佰万","仟万","亿"];
 export function numberToChinese(n: number): string {
   if(n===0) return "零"; if(n<0) return "负"+numberToChinese(-n);
   const s=String(Math.floor(n)); let result="";
-  for(let i=0;i<s.length;i++){const d=parseInt(s[i]);const u=s.length-i-1;if(d!==0)result+=digits[d]+units[u];else if(s.length>1&&result[result.length-1]!=="零"&&i<s.length-1)result+="零"}
+  for(let i=0;i<s.length;i++){const d=parseInt(s[i]);const u=s.length-i-1;if(d!==0){if(!(u===1&&d===1&&result===""))result+=digits[d];result+=units[u]}else if(s.length>1&&result[result.length-1]!=="零"&&i<s.length-1)result+="零"}
   return result.replace(/零$/,"");
 }
 export function numberToChineseUpper(n: number): string {

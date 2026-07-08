@@ -64,6 +64,8 @@ import { NicknameTool } from "@/components/tools/nickname-tool";
 import { ResignationTool } from "@/components/tools/resignation-tool";
 import { LoveWordsTool } from "@/components/tools/love-words-tool";
 import { ExpressTool } from "@/components/tools/express-tool";
+import { FakeTicketTool } from "@/components/tools/fake-ticket-tool";
+import { MomentsTool } from "@/components/tools/moments-tool";
 
 /** 工具组件映射表 —— 新增工具时在这里注册 */
 const toolComponents: Record<string, React.ComponentType> = {
@@ -124,6 +126,8 @@ const toolComponents: Record<string, React.ComponentType> = {
   "resignation": ResignationTool,
   "love-words": LoveWordsTool,
   express: ExpressTool,
+  "fake-ticket": FakeTicketTool,
+  moments: MomentsTool,
 };
 
 /** 为每个工具生成静态页面 */
