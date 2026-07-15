@@ -603,6 +603,44 @@ export const tools: ToolConfig[] = [
     keywords: ["摩斯电码","摩斯密码","morse","摩尔斯电码","电码转换","SOS"],
   },
 
+  // ============ B5. 文件处理补充4 ============
+  {
+    slug: "word-to-md", name: "Word 转 Markdown", description: "在线Word转Markdown工具，上传docx文档自动转为MD格式，方便喂给AI大模型，本地处理保护隐私", category: "file-processing", icon: "📄",
+    keywords: ["Word转MD","Word转Markdown","docx转MD","文档转AI格式","Word转文本"], isPopular: true,
+  },
+  {
+    slug: "image-base64", name: "图片转Base64", description: "在线图片转Base64编码工具，上传图片生成Data URL，适合网页开发和CSS内嵌图片", category: "file-processing", icon: "🖼️",
+    keywords: ["图片转Base64","图片编码","DataURL","Base64图片","图片转代码"],
+  },
+  {
+    slug: "exif-viewer", name: "图片EXIF查看器", description: "在线查看照片EXIF元数据，读取相机型号、拍摄参数、GPS位置等信息，数据本地处理保护隐私", category: "file-processing", icon: "📷",
+    keywords: ["EXIF查看","照片信息","相机参数","照片GPS","照片元数据","图片信息查看"],
+  },
+
+  // ============ D7. 开发者工具补充6 ============
+  {
+    slug: "qr-decode", name: "二维码解码器", description: "在线二维码解码工具，上传含二维码的图片即可识别并提取内容，支持网址、文本、WiFi等类型", category: "developer", icon: "📱",
+    keywords: ["二维码解码","QR解码","二维码识别","扫码","二维码读取","在线解码"], isPopular: true,
+  },
+  {
+    slug: "slug", name: "URL Slug 生成器", description: "在线URL Slug生成工具，输入中文标题自动转为英文URL友好格式，SEO和开发者常用", category: "developer", icon: "🔗",
+    keywords: ["URL Slug","网址别名","SEO URL","文章链接","slug生成","友好URL"],
+  },
+  {
+    slug: "minify", name: "CSS/JS 压缩", description: "在线CSS压缩、JS压缩和HTML转纯文本工具，去除空格注释减小文件体积，开发者必备", category: "developer", icon: "📦",
+    keywords: ["CSS压缩","JS压缩","代码压缩","HTML转文本","代码压缩在线","minify"],
+  },
+  {
+    slug: "colorblind", name: "色盲模拟器", description: "在线色盲视觉模拟工具，输入颜色查看红/绿/蓝色盲患者看到的效果，帮助设计无障碍配色方案", category: "developer", icon: "👁️",
+    keywords: ["色盲模拟","色盲测试","无障碍设计","颜色无障碍","色弱模拟","accessibility"],
+  },
+
+  // ============ E8. 安全工具 ============
+  {
+    slug: "password-checker", name: "密码强度检测", description: "在线密码强度检测工具，实时分析密码长度、字符类型和复杂度，给出安全评分和修复建议", category: "developer", icon: "🔒",
+    keywords: ["密码强度检测","密码安全检查","密码复杂度","检测密码","密码评估","密码安全"],
+  },
+
   // ============ G. 病毒传播类 ============
   {
     slug: "wechat-chat",

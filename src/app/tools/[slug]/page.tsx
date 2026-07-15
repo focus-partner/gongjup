@@ -71,6 +71,14 @@ import { BaseConvertTool } from "@/components/tools/base-convert-tool";
 import { MorseTool } from "@/components/tools/morse-tool";
 import { HolidayTool } from "@/components/tools/holiday-tool";
 import { GIFFramesTool } from "@/components/tools/gif-frames-tool";
+import { WordToMDTool } from "@/components/tools/word-to-md-tool";
+import { QRDecodeTool } from "@/components/tools/qr-decode-tool";
+import { PasswordCheckerTool } from "@/components/tools/password-checker-tool";
+import { SlugTool } from "@/components/tools/slug-tool";
+import { MinifyTool } from "@/components/tools/minify-tool";
+import { ImageBase64Tool } from "@/components/tools/image-base64-tool";
+import { EXIFViewerTool } from "@/components/tools/exif-viewer-tool";
+import { ColorblindTool } from "@/components/tools/colorblind-tool";
 import { FakeTicketTool } from "@/components/tools/fake-ticket-tool";
 import { MomentsTool } from "@/components/tools/moments-tool";
 
@@ -142,6 +150,14 @@ const toolComponents: Record<string, React.ComponentType> = {
   morse: MorseTool,
   holiday: HolidayTool,
   "gif-frames": GIFFramesTool,
+  "word-to-md": WordToMDTool,
+  "qr-decode": QRDecodeTool,
+  "password-checker": PasswordCheckerTool,
+  "slug": SlugTool,
+  minify: MinifyTool,
+  "image-base64": ImageBase64Tool,
+  "exif-viewer": EXIFViewerTool,
+  colorblind: ColorblindTool,
 };
 
 /** 为每个工具生成静态页面 */
