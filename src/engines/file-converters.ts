@@ -2,9 +2,9 @@
 
 // Word→MD via mammoth (browser-compatible)
 export async function wordToMarkdown(file: File): Promise<string> {
-  const m = await import("mammoth");
+  const mammoth = await import("mammoth");
   const arrBuf = await file.arrayBuffer();
-  const result = await m.convertToMarkdown({ arrayBuffer: arrBuf }, {});
+  const result = await (mammoth as any).convertToMarkdown({ arrayBuffer: arrBuf });
   return result.value;
 }
 
