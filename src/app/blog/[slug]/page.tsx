@@ -8,8 +8,8 @@ export function generateStaticParams() {
   return blogPosts.map(post => ({ slug: post.slug }));
 }
 
-export function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Metadata {
-  const { slug } = React.use(params);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
   const post = blogPosts.find(p => p.slug === slug);
   if (!post) return { title: "文章未找到" };
   return {
@@ -59,9 +59,6 @@ function renderInline(text: string): React.ReactNode {
   if (last < text.length) parts.push(text.slice(last));
   return parts.length > 0 ? parts : text;
 }
-
-import React from "react";
-
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = blogPosts.find(p => p.slug === slug);
