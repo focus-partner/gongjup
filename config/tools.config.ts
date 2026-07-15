@@ -565,6 +565,44 @@ export const tools: ToolConfig[] = [
     keywords: ["快递单生成","模拟快递","快递截图","假快递","整蛊工具","快递生成器"],
   },
 
+  // ============ B4. 文件处理补充3 ============
+  {
+    slug: "pdf-to-md", name: "PDF 转 Markdown", description: "在线PDF转Markdown工具，提取PDF文字并转为MD格式，方便喂给AI大模型处理，本地解析保护隐私", category: "file-processing", icon: "📝",
+    keywords: ["PDF转Markdown","PDF转MD","PDF转文本","PDF提取","文档转AI格式","PDF转markdown在线"], isPopular: true,
+  },
+  {
+    slug: "gif-frames", name: "GIF帧提取", description: "在线GIF动图帧提取工具，上传GIF即可提取首帧为PNG图片下载，处理在浏览器本地完成", category: "file-processing", icon: "🎞️",
+    keywords: ["GIF提取","GIF转PNG","动图拆解","GIF帧","GIF分解"],
+  },
+
+  // ============ C4. 文本工具补充2 ============
+  {
+    slug: "text-case", name: "英文大小写转换", description: "在线英文大小写转换工具，支持全大写、全小写、首字母大写、句首大写、大小写反转和文本反转", category: "text-tools", icon: "🔠",
+    keywords: ["大小写转换","英文大小写","大写转小写","小写转大写","首字母大写","文本转换"], isPopular: true,
+  },
+
+  // ============ D6. 开发者工具补充5 ============
+  {
+    slug: "base-convert", name: "进制转换", description: "在线进制转换工具，支持二进制、八进制、十进制、十六进制之间任意转换，程序员必备", category: "developer", icon: "🔢",
+    keywords: ["进制转换","二进制转十进制","十六进制转换","2进制","10进制","16进制","在线进制"],
+  },
+
+  // ============ E7. 生活助手补充4 ============
+  {
+    slug: "holiday", name: "节假日查询", description: "2026年中国节假日在线查询，含法定假日和传统节日，显示倒计时天数，随时了解放假安排", category: "life", icon: "📅",
+    keywords: ["节假日查询","放假安排","2026节假日","法定假日","传统节日","假期倒计时"],
+  },
+
+  // ============ F4. 趣味工具补充3 ============
+  {
+    slug: "emoji", name: "Emoji大全", description: "在线Emoji表情大全，按分类浏览和搜索，点击即可复制到剪贴板，聊天发朋友圈必备", category: "viral", icon: "😀",
+    keywords: ["emoji","表情","表情大全","emoji复制","微信表情","emoji搜索"], isPopular: true,
+  },
+  {
+    slug: "morse", name: "摩斯电码转换", description: "在线摩斯电码转换工具，支持文字转摩斯电码和摩斯电码转文字双向转换，电报时代的浪漫", category: "viral", icon: "📻",
+    keywords: ["摩斯电码","摩斯密码","morse","摩尔斯电码","电码转换","SOS"],
+  },
+
   // ============ G. 病毒传播类 ============
   {
     slug: "wechat-chat",

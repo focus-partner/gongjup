@@ -64,6 +64,13 @@ import { NicknameTool } from "@/components/tools/nickname-tool";
 import { ResignationTool } from "@/components/tools/resignation-tool";
 import { LoveWordsTool } from "@/components/tools/love-words-tool";
 import { ExpressTool } from "@/components/tools/express-tool";
+import { PDFToMDTool } from "@/components/tools/pdf-to-md-tool";
+import { TextCaseTool } from "@/components/tools/text-case-tool";
+import { EmojiTool } from "@/components/tools/emoji-tool";
+import { BaseConvertTool } from "@/components/tools/base-convert-tool";
+import { MorseTool } from "@/components/tools/morse-tool";
+import { HolidayTool } from "@/components/tools/holiday-tool";
+import { GIFFramesTool } from "@/components/tools/gif-frames-tool";
 import { FakeTicketTool } from "@/components/tools/fake-ticket-tool";
 import { MomentsTool } from "@/components/tools/moments-tool";
 
@@ -128,6 +135,13 @@ const toolComponents: Record<string, React.ComponentType> = {
   express: ExpressTool,
   "fake-ticket": FakeTicketTool,
   moments: MomentsTool,
+  "pdf-to-md": PDFToMDTool,
+  "text-case": TextCaseTool,
+  emoji: EmojiTool,
+  "base-convert": BaseConvertTool,
+  morse: MorseTool,
+  holiday: HolidayTool,
+  "gif-frames": GIFFramesTool,
 };
 
 /** 为每个工具生成静态页面 */
