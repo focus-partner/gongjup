@@ -1,0 +1,22 @@
+# Netlify 部署配置
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Next.js 在 Netlify 上使用 @netlify/plugin-nextjs 插件
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# 安全头
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# 静态资源长期缓存
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

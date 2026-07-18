@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
 import { tools } from "../../config/tools.config";
+import { blogPosts } from "@/content/blog/posts";
 import { categoryLabels } from "@/types/tool";
 import type { ToolCategory } from "@/types/tool";
 
 /**
  * 动态生成 sitemap.xml
- * 包含：首页、分类页、工具页
- * 后续博客上线后会自动扩展文章 URL
+ * 包含：首页、分类页、工具页、博客文章
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.SITE_URL || "https://gongjup.com";
@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 1,
     },
     {
@@ -44,6 +44,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
+    });
+  }
+
+  // 博客文章（priority 0.7, changeFrequency daily 因为可能更新）
+  for (const post of blogPosts) {
+    routes.push({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "weekly",
+      priority: 0.7,
     });
   }
 

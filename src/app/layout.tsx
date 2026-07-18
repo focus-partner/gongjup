@@ -38,8 +38,10 @@ export const metadata: Metadata = {
   authors: [{ name: "工具派" }],
   robots: { index: true, follow: true },
   verification: {
+    google: "TODO-google-search-console-code",
     other: {
       "baidu-site-verification": "codeva-EYPFwQ9ke0",
+      "msvalidate.01": "TODO-bing-webmaster-code",
     },
   },
   openGraph: {

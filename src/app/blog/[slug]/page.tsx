@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Calendar } from "lucide-react";
 import { blogPosts } from "@/content/blog/posts";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
 
 export function generateStaticParams() {
   return blogPosts.map(post => ({ slug: post.slug }));
@@ -12,8 +13,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = blogPosts.find(p => p.slug === slug);
   if (!post) return { title: "文章未找到" };
+  const baseUrl = process.env.SITE_URL || "https://gongjup.com";
   return {
-    title: post.title, description: post.description, keywords: post.keywords,
+    title: post.title,
+    description: post.description,
+    keywords: post.keywords,
+    alternates: { canonical: `${baseUrl}/blog/${slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `${baseUrl}/blog/${slug}`,
+      type: "article",
+      publishedTime: post.date,
+      siteName: "工具派",
+      locale: "zh_CN",
+    },
   };
 }
 
@@ -66,6 +80,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 py-8 sm:py-12">
+      <ArticleJsonLd post={post} />
+      <BreadcrumbJsonLd items={[
+        { label: "首页", href: "/" },
+        { label: "实用指南", href: "/blog" },
+        { label: post.title },
+      ]} />
       <Link href="/blog" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
         <ArrowLeft className="h-3.5 w-3.5" />返回实用指南
       </Link>

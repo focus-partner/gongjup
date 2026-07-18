@@ -5,6 +5,7 @@ import { categoryLabels } from "@/types/tool";
 import type { BreadcrumbItem } from "@/types/tool";
 import { ToolHeader } from "@/components/tools/tool-header";
 import { ToolFooter } from "@/components/tools/tool-footer";
+import { ToolJsonLd, FaqJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
 
 // 动态导入所有工具组件（按需加载，减少首屏JS体积）
 import { MortgageCalculator } from "@/components/tools/mortgage-calculator";
@@ -168,15 +169,33 @@ export function generateStaticParams() {
 }
 
 /** 动态生成每个工具页面的 SEO 元数据 */
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}): Metadata | undefined {
-  // Next.js 15+ 中 params 是 Promise，但在 generateMetadata 中使用 await
-  // 这里使用同步方式读取（Next.js 在构建时处理）
-  // 实际上我们需要使用 React.use() 或者直接处理
-  return undefined;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const tool = getToolBySlug(slug);
+  if (!tool) return {};
+
+  const title = `${tool.name}在线免费 - ${tool.keywords.slice(0, 2).join(" | ")} - 工具派`;
+  const description = `${tool.name}，${tool.description}。搜索${tool.keywords.slice(0, 3).join("、")}找到本工具，免费使用无需下载。`;
+  const baseUrl = process.env.SITE_URL || "https://gongjup.com";
+
+  return {
+    title,
+    description,
+    keywords: tool.keywords.join(", "),
+    alternates: { canonical: `${baseUrl}/tools/${slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `${baseUrl}/tools/${slug}`,
+      type: "website",
+      siteName: "工具派",
+      locale: "zh_CN",
+    },
+  };
 }
 
 /**
@@ -221,6 +240,10 @@ export default async function ToolPage({
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 sm:py-12">
+      {/* JSON-LD 结构化数据 */}
+      <ToolJsonLd tool={tool} />
+      <FaqJsonLd faq={faq} />
+      <BreadcrumbJsonLd items={breadcrumbs} />
       {/* 顶部：面包屑 + 标题 + 描述 */}
       <ToolHeader
         title={tool.name}

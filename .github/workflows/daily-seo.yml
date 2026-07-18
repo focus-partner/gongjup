@@ -1,0 +1,26 @@
+# 每日自动生成 SEO 文章 + 推送搜索引擎
+# GitHub Actions 免费额度: 2000 分钟/月, 每天仅需 ~1 分钟
+
+name: Daily SEO Article Generation
+
+on:
+  schedule:
+    # 每天北京时间 8:03 (UTC 0:03)
+    - cron: "3 0 * * *"
+  workflow_dispatch: # 支持手动触发
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger daily article generation
+        run: |
+          response=$(curl -s -w "\n%{http_code}" -X GET \
+            "https://gongjup.com/api/cron/daily-generate?secret=${{ secrets.CRON_SECRET }}")
+          http_code=$(echo "$response" | tail -1)
+          body=$(echo "$response" | sed '$d')
+          echo "HTTP Status: $http_code"
+          echo "Response: $body"
+          if [ "$http_code" != "200" ]; then
+            echo "::warning::Daily generate returned HTTP $http_code"
+          fi
